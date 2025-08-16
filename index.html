@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillCred - AI-Powered Skill Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="screen active">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="logo">SkillCred</h1>
+                    <p class="tagline">AI-Powered Skill Verification</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Verify Skills with AI-Powered Precision</h2>
+                    <p class="hero-description">
+                        SkillCred uses advanced AI to analyze resumes, GitHub profiles, and LinkedIn data 
+                        to provide accurate skill verification with trust scores for better hiring decisions.
+                    </p>
+                    <button class="btn btn--primary btn--lg" id="start-verification-btn">
+                        Start Verification Process
+                    </button>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>AI Skill Detection</h3>
+                        <p>Advanced BERT NLP analysis extracts and validates skills from multiple sources</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Cross-Platform Verification</h3>
+                        <p>Analyzes consistency across resumes, GitHub repositories, and LinkedIn profiles</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Trust Score Analytics</h3>
+                        <p>Generates weighted trust scores based on consistency, recency, and complexity</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Results</h3>
+                        <p>Get comprehensive verification reports in seconds with detailed evidence</p>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <div class="stat-number">94%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Verifications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Skills Tracked</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Upload & Input Screen -->
+    <div id="upload-screen" class="screen">
+        <header class="screen-header">
+            <div class="container">
+                <div class="progress-indicator">
+                    <div class="progress-step active">1</div>
+                    <div class="progress-step">2</div>
+                    <div class="progress-step">3</div>
+                    <div class="progress-step">4</div>
+                </div>
+                <h2>Upload Resume & Profile Information</h2>
+            </div>
+        </header>
+
+        <main class="upload-content">
+            <div class="container">
+                <div class="upload-form">
+                    <div class="form-section">
+                        <h3>Resume Upload</h3>
+                        <div class="file-upload-area" id="file-upload-area">
+                            <div class="upload-icon">📄</div>
+                            <p class="upload-text">
+                                <strong>Drop your resume here</strong> or click to browse
+                            </p>
+                            <p class="upload-hint">Supports PDF and DOCX files (max 10MB)</p>
+                            <input type="file" id="resume-file" accept=".pdf,.docx" hidden>
+                        </div>
+                        <div class="file-info" id="file-info"></div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Profile Information</h3>
+                        <div class="form-group">
+                            <label class="form-label" for="github-username">GitHub Username</label>
+                            <input type="text" id="github-username" class="form-control" 
+                                   placeholder="Enter GitHub username (e.g., johndoe)" value="johndoe">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="linkedin-url">LinkedIn Profile URL</label>
+                            <input type="url" id="linkedin-url" class="form-control" 
+                                   placeholder="https://linkedin.com/in/your-profile" 
+                                   value="https://linkedin.com/in/johndoe">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn btn--outline" id="back-to-landing">Back</button>
+                        <button class="btn btn--primary" id="start-analysis-btn" disabled>
+                            Start Analysis
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Processing Screen -->
+    <div id="processing-screen" class="screen">
+        <div class="container">
+            <div class="processing-content">
+                <h2>AI Verification in Progress</h2>
+                <div class="processing-visual">
+                    <div class="processing-circle">
+                        <div class="processing-inner"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text" id="progress-text">0%</div>
+
+                <div class="processing-steps" id="processing-steps">
+                    <div class="processing-step">Initializing AI verification system...</div>
+                </div>
+
+                <div class="estimated-time">
+                    Estimated time remaining: <span id="time-remaining">30 seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Dashboard -->
+    <div id="results-screen" class="screen">
+        <header class="screen-header">
+            <div class="container">
+                <div class="progress-indicator">
+                    <div class="progress-step completed">1</div>
+                    <div class="progress-step completed">2</div>
+                    <div class="progress-step completed">3</div>
+                    <div class="progress-step active">4</div>
+                </div>
+                <h2>Verification Results</h2>
+            </div>
+        </header>
+
+        <main class="results-content">
+            <div class="container">
+                <div class="results-header">
+                    <div class="trust-score-card">
+                        <h3>Overall Trust Score</h3>
+                        <div class="trust-score-circle">
+                            <div class="score-number" id="overall-trust-score">85</div>
+                            <div class="score-label">out of 100</div>
+                        </div>
+                        <div class="score-status high-trust">High Trust</div>
+                    </div>
+                    
+                    <div class="verification-summary">
+                        <div class="summary-stat">
+                            <span class="stat-number" id="skills-verified">12</span>
+                            <span class="stat-label">Skills Verified</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="stat-number" id="consistency-score">94%</span>
+                            <span class="stat-label">Consistency</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="stat-number" id="recent-activity">85%</span>
+                            <span class="stat-label">Recent Activity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="results-panel">
+                        <h3>Skill Verification Breakdown</h3>
+                        <div class="skills-table" id="skills-table">
+                            <!-- Dynamic content -->
+                        </div>
+                    </div>
+
+                    <div class="results-panel">
+                        <h3>Programming Languages Distribution</h3>
+                        <div class="chart-container" style="height: 300px; position: relative;">
+                            <canvas id="languages-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="results-panel">
+                        <h3>Skill Consistency Analysis</h3>
+                        <div class="chart-container" style="height: 300px; position: relative;">
+                            <canvas id="consistency-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="results-panel">
+                        <h3>GitHub Activity Timeline</h3>
+                        <div class="chart-container" style="height: 300px; position: relative;">
+                            <canvas id="activity-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn--outline" id="new-verification">New Verification</button>
+                    <button class="btn btn--secondary" id="export-report">Export Report</button>
+                    <button class="btn btn--primary" id="view-detailed-analysis">View Detailed Analysis</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Skill Detail Modal -->
+    <div id="skill-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="skill-modal-title">Skill Verification Details</h3>
+                <button class="modal-close" id="close-skill-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="skill-detail-content">
+                    <div class="skill-score-section">
+                        <div class="skill-trust-score">
+                            <span class="score-value" id="skill-trust-value">88</span>
+                            <span class="score-max">/100</span>
+                        </div>
+                        <div class="confidence-level" id="skill-confidence">High Confidence</div>
+                    </div>
+
+                    <div class="evidence-section">
+                        <h4>Evidence Sources</h4>
+                        <div class="evidence-list" id="evidence-list">
+                            <!-- Dynamic content -->
+                        </div>
+                    </div>
+
+                    <div class="recommendations-section">
+                        <h4>Recommendations</h4>
+                        <div class="recommendations-list" id="recommendations-list">
+                            <!-- Dynamic content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Messages -->
+    <div id="error-toast" class="toast hidden">
+        <div class="toast-content">
+            <span class="toast-message" id="error-message"></span>
+            <button class="toast-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
