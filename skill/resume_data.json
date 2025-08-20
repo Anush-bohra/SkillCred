@@ -1,0 +1,1983 @@
+{
+  "1755699287410": {
+    "id": "1755699287410",
+    "filename": "john_doe_resume.pdf",
+    "file_path": "uploads/john_doe_resume.pdf",
+    "uploaded_at": "2025-08-20T19:44:47.410645",
+    "status": "completed",
+    "parsed_data": {
+      "name": "John Doe",
+      "email": "john.doe@email.com",
+      "phone": "+1-555-0123",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "AWS"
+      ],
+      "experience": [
+        {
+          "company": "Google",
+          "position": "Software Engineer",
+          "years": 3
+        },
+        {
+          "company": "Microsoft",
+          "position": "Full Stack Developer",
+          "years": 2
+        }
+      ],
+      "education": [
+        {
+          "degree": "Bachelor of Computer Science",
+          "institution": "MIT",
+          "year": 2018
+        }
+      ],
+      "certifications": [
+        {
+          "name": "AWS Certified",
+          "issuer": "Amazon",
+          "year": 2023
+        }
+      ]
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "Python",
+          "status": "verified",
+          "confidence": 60
+        },
+        {
+          "skill": "JavaScript",
+          "status": "verified",
+          "confidence": 80
+        },
+        {
+          "skill": "React",
+          "status": "verified",
+          "confidence": 80
+        },
+        {
+          "skill": "Node.js",
+          "status": "verified",
+          "confidence": 69
+        },
+        {
+          "skill": "AWS",
+          "status": "verified",
+          "confidence": 93
+        }
+      ],
+      "experience": [
+        {
+          "company": "Google",
+          "position": "Software Engineer",
+          "years": 3,
+          "status": "verified",
+          "confidence": 89
+        },
+        {
+          "company": "Microsoft",
+          "position": "Full Stack Developer",
+          "years": 2,
+          "status": "verified",
+          "confidence": 89
+        }
+      ],
+      "education": [
+        {
+          "degree": "Bachelor of Computer Science",
+          "institution": "MIT",
+          "year": 2018,
+          "status": "verified",
+          "confidence": 71
+        }
+      ],
+      "certifications": [
+        {
+          "name": "AWS Certified",
+          "issuer": "Amazon",
+          "year": 2023,
+          "status": "verified",
+          "confidence": 82,
+          "blockchain_hash": "0x3ee96"
+        }
+      ],
+      "verified_count": 9,
+      "review_count": 0
+    },
+    "trust_score": 92,
+    "flags": []
+  },
+  "1755699287412": {
+    "id": "1755699287412",
+    "filename": "suspicious_resume.pdf",
+    "file_path": "uploads/suspicious_resume.pdf",
+    "uploaded_at": "2025-08-20T19:44:47.412926",
+    "status": "completed",
+    "parsed_data": {
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "JavaScript",
+        "Go",
+        "Rust",
+        "PHP"
+      ],
+      "experience": [
+        {
+          "company": "FakeComp Inc",
+          "position": "CEO",
+          "years": 10
+        },
+        {
+          "company": "Another Fake Co",
+          "position": "CTO",
+          "years": 8
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Fake Certificate",
+          "issuer": "Unknown Authority",
+          "year": 2023
+        }
+      ]
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "Python",
+          "status": "needs_review",
+          "confidence": 74
+        },
+        {
+          "skill": "Java",
+          "status": "needs_review",
+          "confidence": 75
+        },
+        {
+          "skill": "C++",
+          "status": "needs_review",
+          "confidence": 74
+        },
+        {
+          "skill": "JavaScript",
+          "status": "needs_review",
+          "confidence": 78
+        },
+        {
+          "skill": "Go",
+          "status": "needs_review",
+          "confidence": 82
+        },
+        {
+          "skill": "Rust",
+          "status": "needs_review",
+          "confidence": 76
+        },
+        {
+          "skill": "PHP",
+          "status": "needs_review",
+          "confidence": 68
+        }
+      ],
+      "experience": [
+        {
+          "company": "FakeComp Inc",
+          "position": "CEO",
+          "years": 10,
+          "status": "flagged",
+          "confidence": 66
+        },
+        {
+          "company": "Another Fake Co",
+          "position": "CTO",
+          "years": 8,
+          "status": "flagged",
+          "confidence": 62
+        }
+      ],
+      "education": [],
+      "certifications": [
+        {
+          "name": "Fake Certificate",
+          "issuer": "Unknown Authority",
+          "year": 2023,
+          "status": "flagged",
+          "confidence": 67,
+          "blockchain_hash": null
+        }
+      ],
+      "verified_count": 0,
+      "review_count": 7
+    },
+    "trust_score": 23,
+    "flags": [
+      {
+        "type": "verification_failed",
+        "category": "experience",
+        "severity": "high",
+        "message": "Could not verify employment claims"
+      },
+      {
+        "type": "skill_stuffing",
+        "category": "skills",
+        "severity": "low",
+        "message": "Unusually high number of skills listed"
+      }
+    ]
+  },
+  "1755699795484": {
+    "id": "1755699795484",
+    "filename": "Akash_Yadav_Resume.pdf",
+    "file_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\skill\\static\\uploads\\Akash_Yadav_Resume.pdf",
+    "uploaded_at": "2025-08-20T19:53:15.484262",
+    "status": "completed",
+    "parsed_data": {
+      "raw_text": "AKASH YADAV  \nB.Tech CSE Student | Aspiring Developer | IEEE Core Member | Web Development \nEnthusiast  \nPROFILE  \nA dedicated and enthusiastic Computer Science Engineering student at UPES with foundational \nknowledge in Java, Python, and C. Actively developing web development skills in HTML, CSS, and \nJavaScript. Strong interest in software development, with a proven track record in leadership \nand teamwork through active participation in technical and social initiatives.  \nCONTACT  \n+91-7007746907  \nakashyad av22052005@gmail.com  \nLinkedIn: www.linkedin.com/in/akash -yadav -514660334  \nGitHub: https://github.com/Akashyadav1234 -hub \nEDUCATION  \nUniversity of Petroleum and Energy Studies (UPES)  \nB.Tech in Computer Science Engineering  \nEXPERIENCE  \nGroup Leade r – Youth Willers NGO  \nJune 2025 – August 2025  \n- Led a group of volunteers in organizing community -driven educational programs.  \n- Learned and applied leadership, communication, and event coordination skills.  \nSKILLS  \n- Programming Languages: C, Java, Python ( Basics)  \n- Web Development: HTML, CSS, JavaScript (Learning)  \n- Tools: GitHub, VS Code  \n- Soft Skills: Leadership, Teamwork, Problem -Solving, Communication  POSITIONS OF RESPONSIBILITY  \nIEEE UPES Student Chapter  \nCore Committee Member (July 2025 – Present)  \n- Contributed to organizing tech events and workshops.  \nINTERESTS  \n- Web & App Development  \n- Technical Documentation  \n- Open Source Collaboration  ",
+      "name": "AKASH YADAV",
+      "email": "av22052005@gmail.com",
+      "phone": "7007746907",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "HTML",
+        "CSS",
+        "Git"
+      ],
+      "experience": [
+        {
+          "company": "in tech",
+          "years": 4,
+          "position": "Software Developer"
+        },
+        {
+          "company": "EXPERIENCE  \nGroup",
+          "years": 4,
+          "position": "Software Developer"
+        },
+        {
+          "company": "a group",
+          "years": 4,
+          "position": "Software Developer"
+        },
+        {
+          "company": "UPES with foundational \nknowledge in Java",
+          "years": 4,
+          "position": "Software Developer"
+        }
+      ],
+      "education": [
+        {
+          "degree": "B.Tech",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "B.Tech",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ms.",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ba",
+          "year": 2020,
+          "institution": "University Name"
+        }
+      ],
+      "certifications": [],
+      "parsed_at": "2025-08-20T19:53:15.550525"
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "Python",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 45,
+            "leetcode_solved": 120
+          },
+          "confidence": 95
+        },
+        {
+          "skill": "JavaScript",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 32,
+            "leetcode_solved": 85
+          },
+          "confidence": 80
+        },
+        {
+          "skill": "Java",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 26
+        },
+        {
+          "skill": "HTML",
+          "status": "needs_review",
+          "evidence": {},
+          "confidence": 44
+        },
+        {
+          "skill": "CSS",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 47
+        },
+        {
+          "skill": "Git",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 42
+        }
+      ],
+      "experience": [
+        {
+          "company": "in tech",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "needs_review",
+          "confidence": 45
+        },
+        {
+          "company": "EXPERIENCE  \nGroup",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "flagged",
+          "confidence": 40
+        },
+        {
+          "company": "a group",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "flagged",
+          "confidence": 70
+        },
+        {
+          "company": "UPES with foundational \nknowledge in Java",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "needs_review",
+          "confidence": 60
+        }
+      ],
+      "education": [
+        {
+          "degree": "B.Tech",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 69
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "flagged",
+          "confidence": 70
+        },
+        {
+          "degree": "B.Tech",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 48
+        },
+        {
+          "degree": "ms.",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "flagged",
+          "confidence": 73
+        },
+        {
+          "degree": "Ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "flagged",
+          "confidence": 59
+        }
+      ],
+      "certifications": [],
+      "verified_count": 2,
+      "review_count": 8
+    },
+    "trust_score": 0,
+    "flags": [
+      {
+        "type": "verification_failed",
+        "category": "experience",
+        "item": "EXPERIENCE  \nGroup",
+        "severity": "high",
+        "message": "Could not verify experience claim"
+      },
+      {
+        "type": "verification_failed",
+        "category": "experience",
+        "item": "a group",
+        "severity": "high",
+        "message": "Could not verify experience claim"
+      },
+      {
+        "type": "verification_failed",
+        "category": "education",
+        "item": null,
+        "severity": "high",
+        "message": "Could not verify education claim"
+      },
+      {
+        "type": "verification_failed",
+        "category": "education",
+        "item": null,
+        "severity": "high",
+        "message": "Could not verify education claim"
+      },
+      {
+        "type": "verification_failed",
+        "category": "education",
+        "item": null,
+        "severity": "high",
+        "message": "Could not verify education claim"
+      }
+    ]
+  },
+  "1755700159171": {
+    "id": "1755700159171",
+    "filename": "Pranav_Dixit_CV.docx",
+    "file_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\skill\\static\\uploads\\Pranav_Dixit_CV.docx",
+    "uploaded_at": "2025-08-20T19:59:19.171198",
+    "status": "completed",
+    "parsed_data": {
+      "raw_text": "Pranav Dixit\n📍 Dehradun, Uttarakhand, India | ✉️ pranav1467d2gamil.com | 📞 +91-7800415023 | 🔗 www.linkedin.com/in/pranav-dixit-9ab7b7345\nProfile Summary\nB.Tech Computer Science student at UPES (Batch 2028) with a passion for AI/ML, software development, and leadership in student organizations. Active member of IEEE Computer Society (Core Events Committee) and Discipline Committee. Experienced in project leadership, app development, and social impact internships.\nEducation\nUniversity of Petroleum and Energy Studies (UPES) – B.Tech, Computer Science (2024 – 2028)\nArmy Public School – Class XII (2023)\nExperience\nIEEE Computer Society – Core Committee (Events Department)\nMember | Jul 2025 – Present | Dehradun, India (Hybrid)\n- Organized and managed tech events and workshops under IEEE CS Chapter.\n- Contributed to planning, outreach, and execution of student-led technical programs.\nUPES – Discipline Committee\nMember | Dec 2024 – Present | On-site\n- Ensured discipline and student conduct during academic and co-curricular activities.\n- Collaborated with faculty and administration for smooth event management.\nSamarth Bharat Vyaspeeth (Signal Shala)\nSummer Intern | Jun 2025 – Aug 2025 | Maharashtra (Remote)\n- Led a CSE project internship focused on digital solutions for education.\n- Collaborated with NGO to improve access to education for underprivileged children.\nProjects\nExpense Tracker (React Native, Node.js)\n- Built a mobile app for tracking personal expenses with categories and persistent storage.\n- Implemented modern UI, swipe-to-delete, and data visualization features.\nSentiment Analysis (Python, NLP, NLTK)\n- Developed a model to classify 1,000+ Twitter comments into positive, negative, and sarcasm categories.\n- Applied Natural Language Processing and machine learning techniques.\nSkillCred – Hackathon Project (ICP-WCHL25 by DoraHacks)\n- Built a decentralized resume verification system.\n- Qualified for the National Round.\nAchievements & Activities\n- Selected as Core Committee Member (Events) at IEEE CS UPES.\n- Successfully completed Microsoft Technical Community’s Cognition 4.0 Bootcamp (React Native + Mobile App Development).\n- Certificate of Contribution in student-led technical committees.\n- Active on LinkedIn with 2,800+ followers, sharing projects & achievements.\nSkills\n- Programming: Python, JavaScript, C, React Native\n- AI/ML & Data: NLP, NLTK, Sentiment Analysis\n- Tools: Git, Firebase, Node.js\n- Soft Skills: Leadership, Project Management, Event Coordination",
+      "name": "Pranav Dixit",
+      "email": null,
+      "phone": "7800415023",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "Git",
+        "Machine Learning"
+      ],
+      "experience": [
+        {
+          "company": "managed tech",
+          "years": 8,
+          "position": "Software Developer"
+        },
+        {
+          "company": "led tech",
+          "years": 8,
+          "position": "Software Developer"
+        },
+        {
+          "company": "digital solutions",
+          "years": 8,
+          "position": "Software Developer"
+        },
+        {
+          "company": "UPES",
+          "years": 8,
+          "position": "Software Developer"
+        },
+        {
+          "company": "Vyaspeeth",
+          "years": 8,
+          "position": "Software Developer"
+        },
+        {
+          "company": "IEEE CS UPES",
+          "years": 8,
+          "position": "Software Developer"
+        }
+      ],
+      "education": [
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "B.Tech",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "B.Tech",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ms.",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ma",
+          "year": 2020,
+          "institution": "University Name"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Certificate",
+          "year": 2023,
+          "issuer": "Certification Body"
+        },
+        {
+          "name": "Microsoft",
+          "year": 2023,
+          "issuer": "Certification Body"
+        }
+      ],
+      "parsed_at": "2025-08-20T19:59:19.221736"
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "Python",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 45,
+            "leetcode_solved": 120
+          },
+          "confidence": 62
+        },
+        {
+          "skill": "JavaScript",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 32,
+            "leetcode_solved": 85
+          },
+          "confidence": 74
+        },
+        {
+          "skill": "Java",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 55
+        },
+        {
+          "skill": "React",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 28,
+            "projects": 15
+          },
+          "confidence": 64
+        },
+        {
+          "skill": "Node.js",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 22,
+            "npm_packages": 3
+          },
+          "confidence": 70
+        },
+        {
+          "skill": "Git",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 57
+        },
+        {
+          "skill": "Machine Learning",
+          "status": "verified",
+          "evidence": {
+            "kaggle_competitions": 5,
+            "papers": 2
+          },
+          "confidence": 92
+        }
+      ],
+      "experience": [
+        {
+          "company": "managed tech",
+          "position": "Software Developer",
+          "years": 8,
+          "status": "needs_review",
+          "confidence": 33
+        },
+        {
+          "company": "led tech",
+          "position": "Software Developer",
+          "years": 8,
+          "status": "needs_review",
+          "confidence": 32
+        },
+        {
+          "company": "digital solutions",
+          "position": "Software Developer",
+          "years": 8,
+          "status": "needs_review",
+          "confidence": 30
+        },
+        {
+          "company": "UPES",
+          "position": "Software Developer",
+          "years": 8,
+          "status": "needs_review",
+          "confidence": 54
+        },
+        {
+          "company": "Vyaspeeth",
+          "position": "Software Developer",
+          "years": 8,
+          "status": "needs_review",
+          "confidence": 36
+        },
+        {
+          "company": "IEEE CS UPES",
+          "position": "Software Developer",
+          "years": 8,
+          "status": "flagged",
+          "confidence": 60
+        }
+      ],
+      "education": [
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 56
+        },
+        {
+          "degree": "B.Tech",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 55
+        },
+        {
+          "degree": "Ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 61
+        },
+        {
+          "degree": "B.Tech",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 57
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 49
+        },
+        {
+          "degree": "ms.",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 65
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 70
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 49
+        },
+        {
+          "degree": "Ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 62
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 61
+        },
+        {
+          "degree": "ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 41
+        },
+        {
+          "degree": "Ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 74
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Certificate",
+          "issuer": "Certification Body",
+          "year": 2023,
+          "status": "verified",
+          "blockchain_hash": "0xc88a5",
+          "confidence": 99
+        },
+        {
+          "name": "Microsoft",
+          "issuer": "Certification Body",
+          "year": 2023,
+          "status": "verified",
+          "blockchain_hash": "0x97312",
+          "confidence": 90
+        }
+      ]
+    },
+    "trust_score": 15.9,
+    "flags": [
+      {
+        "type": "verification_failed",
+        "category": "experience",
+        "item": "IEEE CS UPES",
+        "severity": "high",
+        "message": "Could not verify experience claim"
+      },
+      {
+        "type": "excessive_experience",
+        "category": "experience",
+        "severity": "medium",
+        "message": "Unusually high number of work experiences (6)"
+      }
+    ]
+  },
+  "1755702135195": {
+    "id": "1755702135195",
+    "filename": "Resume_1_Software_Engineer.docx",
+    "file_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\skill\\static\\uploads\\Resume_1_Software_Engineer.docx",
+    "uploaded_at": "2025-08-20T20:32:15.195817",
+    "status": "completed",
+    "parsed_data": {
+      "raw_text": "Resume 1 – Software Engineer\nName: Arjun Mehta\nEmail: arjun.mehta@email.com | Phone: +91-9876543210\nLocation: Bengaluru, India\nLinkedIn: linkedin.com/in/arjunmehta | GitHub: github.com/arjunm\nSummary\nFull-stack developer with 4+ years of experience building scalable web applications. Strong background in JavaScript, Node.js, and React. Passionate about solving complex problems with efficient code.\nSkills\nProgramming: JavaScript (ES6+), TypeScript, Python, Java\nFrameworks: React, Node.js, Express, Next.js\nDatabases: MongoDB, PostgreSQL\nTools: Git, Docker, AW\nExperience\nSoftware Engineer | Infosys, Bengaluru\nJul 2020 – Present\nBuilt and deployed a scalable e-commerce platform using MERN stack, increasing user engagement by 30%.\nImplemented CI/CD pipelines reducing deployment time by 40%.\nIntern | Wipro, Bengaluru\nJan 2019 – Jun 2020\nAssisted in building REST APIs for a healthcare management system.\nEducation\nB.Tech in Computer Science – NIT Karnataka (2016–2020)\n",
+      "name": "Name: Arjun Mehta",
+      "email": "arjun.mehta@email.com",
+      "phone": "9876543210",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "SQL",
+        "MongoDB",
+        "PostgreSQL",
+        "Git",
+        "Docker",
+        "CI/CD"
+      ],
+      "experience": [],
+      "education": [
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ms",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "B.Tech",
+          "year": 2020,
+          "institution": "University Name"
+        }
+      ],
+      "certifications": [],
+      "parsed_at": "2025-08-20T20:32:15.647904"
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "Python",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 45,
+            "leetcode_solved": 120
+          },
+          "confidence": 83
+        },
+        {
+          "skill": "JavaScript",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 32,
+            "leetcode_solved": 85
+          },
+          "confidence": 79
+        },
+        {
+          "skill": "Java",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 24
+        },
+        {
+          "skill": "React",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 28,
+            "projects": 15
+          },
+          "confidence": 84
+        },
+        {
+          "skill": "Node.js",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 22,
+            "npm_packages": 3
+          },
+          "confidence": 72
+        },
+        {
+          "skill": "SQL",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 59
+        },
+        {
+          "skill": "MongoDB",
+          "status": "needs_review",
+          "evidence": {},
+          "confidence": 47
+        },
+        {
+          "skill": "PostgreSQL",
+          "status": "needs_review",
+          "evidence": {},
+          "confidence": 58
+        },
+        {
+          "skill": "Git",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 23
+        },
+        {
+          "skill": "Docker",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 45
+        },
+        {
+          "skill": "CI/CD",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 44
+        }
+      ],
+      "experience": [],
+      "education": [
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 45
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "flagged",
+          "confidence": 43
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 46
+        },
+        {
+          "degree": "ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 72
+        },
+        {
+          "degree": "ms",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 61
+        },
+        {
+          "degree": "ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "flagged",
+          "confidence": 53
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 59
+        },
+        {
+          "degree": "B.Tech",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 70
+        }
+      ],
+      "certifications": []
+    },
+    "trust_score": 1.1,
+    "flags": [
+      {
+        "type": "verification_failed",
+        "category": "education",
+        "item": null,
+        "severity": "high",
+        "message": "Could not verify education claim"
+      },
+      {
+        "type": "verification_failed",
+        "category": "education",
+        "item": null,
+        "severity": "high",
+        "message": "Could not verify education claim"
+      }
+    ]
+  },
+  "1755702135660": {
+    "id": "1755702135660",
+    "filename": "Resume_2_Data_Scientist.docx",
+    "file_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\skill\\static\\uploads\\Resume_2_Data_Scientist.docx",
+    "uploaded_at": "2025-08-20T20:32:15.660394",
+    "status": "completed",
+    "parsed_data": {
+      "raw_text": "Resume 2 – Data Scientist\nName: Priya Sharma\nEmail: priya.sharma@email.com | Phone: +91-9123456789\nLocation: Pune, India\nPortfolio: priyasharma.ai\nSummary\nData Scientist with 3 years of experience in predictive modeling, NLP, and machine learning. Adept at turning complex datasets into actionable insights.\nSkills\nPython, R, SQL\nMachine Learning: Scikit-learn, TensorFlow, PyTorch\nData Visualization: Tableau, Power BI, Matplotlib\nBig Data: Hadoop, Spark\nExperience\nData Scientist | TCS, Pune\nAug 2021 – Present\nDeveloped a churn prediction model that improved customer retention by 18%.\nBuilt NLP pipeline for sentiment analysis of 1M+ customer reviews.\nData Analyst | Capgemini\nJul 2019 – Jul 2021\nAutomated reporting dashboards, reducing manual work by 50%.\nEducation\nM.Sc. in Data Science – University of Pune (2017–2019)",
+      "name": "Name: Priya Sharma",
+      "email": "priya.sharma@email.com",
+      "phone": "9123456789",
+      "skills": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Data Science",
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "experience": [
+        {
+          "company": "turning complex datasets into actionable insights",
+          "years": 5,
+          "position": "Software Developer"
+        },
+        {
+          "company": "improved customer retention by",
+          "years": 5,
+          "position": "Software Developer"
+        }
+      ],
+      "education": [
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma.",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "M.S",
+          "year": 2020,
+          "institution": "University Name"
+        }
+      ],
+      "certifications": [],
+      "parsed_at": "2025-08-20T20:32:15.811729"
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "Python",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 45,
+            "leetcode_solved": 120
+          },
+          "confidence": 91
+        },
+        {
+          "skill": "SQL",
+          "status": "needs_review",
+          "evidence": {},
+          "confidence": 48
+        },
+        {
+          "skill": "Machine Learning",
+          "status": "verified",
+          "evidence": {
+            "kaggle_competitions": 5,
+            "papers": 2
+          },
+          "confidence": 66
+        },
+        {
+          "skill": "Data Science",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 31
+        },
+        {
+          "skill": "TensorFlow",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 50
+        },
+        {
+          "skill": "PyTorch",
+          "status": "needs_review",
+          "evidence": {},
+          "confidence": 51
+        }
+      ],
+      "experience": [
+        {
+          "company": "turning complex datasets into actionable insights",
+          "position": "Software Developer",
+          "years": 5,
+          "status": "flagged",
+          "confidence": 54
+        },
+        {
+          "company": "improved customer retention by",
+          "position": "Software Developer",
+          "years": 5,
+          "status": "flagged",
+          "confidence": 30
+        }
+      ],
+      "education": [
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 41
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 60
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 63
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 66
+        },
+        {
+          "degree": "ma.",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 42
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 62
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 65
+        },
+        {
+          "degree": "Ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 56
+        },
+        {
+          "degree": "Ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 57
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 65
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 56
+        },
+        {
+          "degree": "M.S",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 62
+        }
+      ],
+      "certifications": []
+    },
+    "trust_score": 0,
+    "flags": [
+      {
+        "type": "verification_failed",
+        "category": "experience",
+        "item": "turning complex datasets into actionable insights",
+        "severity": "high",
+        "message": "Could not verify experience claim"
+      },
+      {
+        "type": "verification_failed",
+        "category": "experience",
+        "item": "improved customer retention by",
+        "severity": "high",
+        "message": "Could not verify experience claim"
+      }
+    ]
+  },
+  "1755702135822": {
+    "id": "1755702135822",
+    "filename": "Resume_3_UI.docx",
+    "file_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\skill\\static\\uploads\\Resume_3_UI.docx",
+    "uploaded_at": "2025-08-20T20:32:15.822675",
+    "status": "completed",
+    "parsed_data": {
+      "raw_text": "Resume 3 – UI/UX Designer\nName: Karan Singh\nEmail: karan.singh@email.com | Phone: +91-9988776655\nLocation: Delhi, India\nPortfolio: karan.design\nSummary\nCreative UI/UX designer with 5 years of experience crafting intuitive and engaging digital experiences. Skilled in user research, wireframing, and prototyping.\nSkills\n\nTools: Figma, Adobe XD, Sketch, InVision\n\n\nUX Research, Wireframing, Prototyping\n\n\nFrontend Basics: HTML, CSS, JavaScript\n\nExperience\nSenior UI/UX Designer | Flipkart, Delhi\nSep 2020 – Present\n\nRedesigned mobile app interface, improving user retention by 25%.\n\n\nConducted usability testing with 100+ participants.\n\nUI Designer | Paytm\nJul 2017 – Aug 2020\n\nDesigned payment app interfaces used by 10M+ users.\n\nEducation\n\nB.Des in Interaction Design – NID Ahmedabad (2013–2017)\n\n",
+      "name": "Name: Karan Singh",
+      "email": "karan.singh@email.com",
+      "phone": "9988776655",
+      "skills": [
+        "JavaScript",
+        "Java",
+        "HTML",
+        "CSS",
+        "Git"
+      ],
+      "experience": [],
+      "education": [
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ba",
+          "year": 2020,
+          "institution": "University Name"
+        }
+      ],
+      "certifications": [],
+      "parsed_at": "2025-08-20T20:32:15.987075"
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "JavaScript",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 32,
+            "leetcode_solved": 85
+          },
+          "confidence": 95
+        },
+        {
+          "skill": "Java",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 58
+        },
+        {
+          "skill": "HTML",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 39
+        },
+        {
+          "skill": "CSS",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 35
+        },
+        {
+          "skill": "Git",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 57
+        }
+      ],
+      "experience": [],
+      "education": [
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 43
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 49
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 71
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 50
+        },
+        {
+          "degree": "Ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 50
+        },
+        {
+          "degree": "ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 55
+        }
+      ],
+      "certifications": []
+    },
+    "trust_score": 9.1,
+    "flags": []
+  },
+  "1755702136000": {
+    "id": "1755702136000",
+    "filename": "Resume_4_Cybersecurity_Specialist.docx",
+    "file_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\skill\\static\\uploads\\Resume_4_Cybersecurity_Specialist.docx",
+    "uploaded_at": "2025-08-20T20:32:16.000909",
+    "status": "completed",
+    "parsed_data": {
+      "raw_text": "Resume 4 – Cybersecurity Specialist\nName: Rohan Verma\nEmail: rohan.verma@email.com | Phone: +91-7766554433\nLocation: Hyderabad, India\nLinkedIn: linkedin.com/in/rohanverma\nSummary\nCybersecurity analyst with 6 years of experience securing enterprise systems. Expert in penetration testing, threat detection, and compliance frameworks.\nSkills\nSecurity Tools: Wireshark, Metasploit, Burp Suite\nCloud Security: AWS, Azure\nCompliance: ISO 27001, GDPR, HIPAA\nProgramming: Python, Bash\nExperience\nCybersecurity Specialist | Deloitte, Hyderabad\nOct 2019 – Present\nConducted penetration tests reducing vulnerabilities by 45%.\nImplemented SIEM monitoring systems that reduced detection time from hours to minutes.\nSecurity Analyst | Infosys\nJan 2016 – Sep 2019\nEnsured compliance with ISO standards for banking clients.\nEducation\nB.Tech in Information Security – IIIT Hyderabad (2012–2016)",
+      "name": "Name: Rohan Verma",
+      "email": "rohan.verma@email.com",
+      "phone": "7766554433",
+      "skills": [
+        "Python",
+        "AWS",
+        "Azure"
+      ],
+      "experience": [
+        {
+          "company": "enterprise systems",
+          "years": 4,
+          "position": "Software Developer"
+        },
+        {
+          "company": "monitoring systems",
+          "years": 4,
+          "position": "Software Developer"
+        },
+        {
+          "company": "detection",
+          "years": 4,
+          "position": "Software Developer"
+        },
+        {
+          "company": "reduced detection time from hours to minutes",
+          "years": 4,
+          "position": "Software Developer"
+        }
+      ],
+      "education": [
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ms.",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ms",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ba",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "B.Tech",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ba",
+          "year": 2020,
+          "institution": "University Name"
+        }
+      ],
+      "certifications": [],
+      "parsed_at": "2025-08-20T20:32:16.158242"
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "Python",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 45,
+            "leetcode_solved": 120
+          },
+          "confidence": 78
+        },
+        {
+          "skill": "AWS",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 22
+        },
+        {
+          "skill": "Azure",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 35
+        }
+      ],
+      "experience": [
+        {
+          "company": "enterprise systems",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "flagged",
+          "confidence": 52
+        },
+        {
+          "company": "monitoring systems",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "needs_review",
+          "confidence": 35
+        },
+        {
+          "company": "detection",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "needs_review",
+          "confidence": 51
+        },
+        {
+          "company": "reduced detection time from hours to minutes",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "needs_review",
+          "confidence": 69
+        }
+      ],
+      "education": [
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 44
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 72
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 52
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 63
+        },
+        {
+          "degree": "ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 55
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "flagged",
+          "confidence": 73
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 41
+        },
+        {
+          "degree": "ms.",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 47
+        },
+        {
+          "degree": "Ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 62
+        },
+        {
+          "degree": "ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 75
+        },
+        {
+          "degree": "ms",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 48
+        },
+        {
+          "degree": "ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 43
+        },
+        {
+          "degree": "B.Tech",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 65
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 65
+        },
+        {
+          "degree": "ba",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "flagged",
+          "confidence": 44
+        }
+      ],
+      "certifications": []
+    },
+    "trust_score": 0,
+    "flags": [
+      {
+        "type": "verification_failed",
+        "category": "experience",
+        "item": "enterprise systems",
+        "severity": "high",
+        "message": "Could not verify experience claim"
+      },
+      {
+        "type": "verification_failed",
+        "category": "education",
+        "item": null,
+        "severity": "high",
+        "message": "Could not verify education claim"
+      },
+      {
+        "type": "verification_failed",
+        "category": "education",
+        "item": null,
+        "severity": "high",
+        "message": "Could not verify education claim"
+      }
+    ]
+  },
+  "1755702136171": {
+    "id": "1755702136171",
+    "filename": "Resume_5_DevOps_Engineer.docx",
+    "file_path": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\skill\\static\\uploads\\Resume_5_DevOps_Engineer.docx",
+    "uploaded_at": "2025-08-20T20:32:16.171983",
+    "status": "completed",
+    "parsed_data": {
+      "raw_text": "Resume 5 – DevOps Engineer\nName: Sneha Iyer\nEmail: sneha.iyer@email.com | Phone: +91-9001122334\nLocation: Chennai, India\nGitHub: github.com/snehaiyer | LinkedIn: linkedin.com/in/snehaiyer\nSummary\nDevOps engineer with 4+ years of experience automating deployments and optimizing cloud infrastructure. Skilled in CI/CD, containerization, and cloud operations.\nSkills\n\nTools: Jenkins, Docker, Kubernetes, Ansible, Terraform\n\n\nCloud: AWS, GCP\n\n\nMonitoring: Prometheus, Grafana\n\n\nLanguages: Python, Go\n\nExperience\nDevOps Engineer | Zoho, Chennai\nApr 2020 – Present\n\nAutomated infrastructure provisioning with Terraform, reducing setup time by 70%.\n\n\nMigrated legacy applications to Kubernetes clusters.\n\nCloud Engineer | HCL\nJan 2018 – Mar 2020\n\nManaged AWS cloud deployments for enterprise clients.\n\nEducation\n\nB.Tech in Information Technology – Anna University (2014–2018)\n\n",
+      "name": "Name: Sneha Iyer",
+      "email": "sneha.iyer@email.com",
+      "phone": "9001122334",
+      "skills": [
+        "Python",
+        "Git",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "DevOps",
+        "CI/CD"
+      ],
+      "experience": [
+        {
+          "company": "Information Tech",
+          "years": 4,
+          "position": "Software Developer"
+        }
+      ],
+      "education": [
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "Ma",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "B.Tech",
+          "year": 2020,
+          "institution": "University Name"
+        },
+        {
+          "degree": "ma",
+          "year": 2020,
+          "institution": "University Name"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Kubernetes",
+          "year": 2023,
+          "issuer": "Certification Body"
+        }
+      ],
+      "parsed_at": "2025-08-20T20:32:16.343753"
+    },
+    "verification_results": {
+      "skills": [
+        {
+          "skill": "Python",
+          "status": "verified",
+          "evidence": {
+            "github_repos": 45,
+            "leetcode_solved": 120
+          },
+          "confidence": 80
+        },
+        {
+          "skill": "Git",
+          "status": "needs_review",
+          "evidence": {},
+          "confidence": 36
+        },
+        {
+          "skill": "Docker",
+          "status": "needs_review",
+          "evidence": {},
+          "confidence": 50
+        },
+        {
+          "skill": "Kubernetes",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 53
+        },
+        {
+          "skill": "AWS",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 31
+        },
+        {
+          "skill": "DevOps",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 49
+        },
+        {
+          "skill": "CI/CD",
+          "status": "unverified",
+          "evidence": {},
+          "confidence": 20
+        }
+      ],
+      "experience": [
+        {
+          "company": "Information Tech",
+          "position": "Software Developer",
+          "years": 4,
+          "status": "needs_review",
+          "confidence": 32
+        }
+      ],
+      "education": [
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 61
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 47
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 67
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 70
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 52
+        },
+        {
+          "degree": "Ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 65
+        },
+        {
+          "degree": "Ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 57
+        },
+        {
+          "degree": "B.Tech",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "needs_review",
+          "confidence": 50
+        },
+        {
+          "degree": "ma",
+          "institution": "University Name",
+          "year": 2020,
+          "status": "flagged",
+          "confidence": 60
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Kubernetes",
+          "issuer": "Certification Body",
+          "year": 2023,
+          "status": "verified",
+          "blockchain_hash": "0xa1d6a",
+          "confidence": 87
+        }
+      ]
+    },
+    "trust_score": 1.1,
+    "flags": [
+      {
+        "type": "verification_failed",
+        "category": "education",
+        "item": null,
+        "severity": "high",
+        "message": "Could not verify education claim"
+      }
+    ]
+  }
+}

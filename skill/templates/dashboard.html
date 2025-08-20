@@ -1,0 +1,312 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - SkillCred{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-between align-center mb-6">
+    <div>
+        <h1>Recruiter Dashboard</h1>
+        <p class="text-secondary">Monitor resume verification and fraud detection in real-time</p>
+    </div>
+    <div class="d-flex gap-3">
+        <button class="btn btn-outline" onclick="exportDashboard('csv')">
+            <i class="fas fa-download"></i>
+            Export Data
+        </button>
+        <a href="{{ url_for('upload_page') }}" class="btn btn-primary">
+            <i class="fas fa-plus"></i>
+            Upload Resumes
+        </a>
+    </div>
+</div>
+
+<!-- KPI Stats Grid -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-value" id="totalResumes">{{ stats.total_resumes }}</div>
+        <div class="stat-label">Total Resumes</div>
+        <div class="stat-change positive">
+            <i class="fas fa-arrow-up"></i>
+            +12% from last month
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-value" id="avgTrustScore">{{ stats.avg_trust_score }}%</div>
+        <div class="stat-label">Avg Trust Score</div>
+        <div class="stat-change positive">
+            <i class="fas fa-arrow-up"></i>
+            +3.2% from last week
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-value" id="verificationRate">{{ stats.verification_rate }}%</div>
+        <div class="stat-label">Verification Rate</div>
+        <div class="stat-change positive">
+            <i class="fas fa-arrow-up"></i>
+            +5.1% from last week
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-value" id="fraudAlerts" style="color: var(--danger-color)">{{ stats.fraud_alerts }}</div>
+        <div class="stat-label">Fraud Alerts</div>
+        <div class="stat-change negative">
+            <i class="fas fa-arrow-down"></i>
+            -15% from last month
+        </div>
+    </div>
+</div>
+
+<!-- Charts Section -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+    <!-- Trust Score Distribution -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Trust Score Distribution</h3>
+            <p class="card-subtitle">Distribution of verification scores across all resumes</p>
+        </div>
+        <div style="height: 300px; position: relative;">
+            <canvas id="trustScoreChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Verification Status -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Verification Status</h3>
+            <p class="card-subtitle">Current status of resume verifications</p>
+        </div>
+        <div style="height: 300px; position: relative;">
+            <canvas id="statusChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Skills Analysis -->
+<div class="card mb-6">
+    <div class="card-header">
+        <h3 class="card-title">Most Claimed Skills</h3>
+        <p class="card-subtitle">Top skills appearing in submitted resumes</p>
+    </div>
+    <div style="height: 300px; position: relative;">
+        <canvas id="skillsChart"></canvas>
+    </div>
+</div>
+
+<!-- Search and Filters -->
+<div class="card mb-4">
+    <div class="card-header">
+        <div class="d-flex justify-between align-center">
+            <div>
+                <h3 class="card-title">Resume Database</h3>
+                <p class="card-subtitle">Search, filter, and manage uploaded resumes</p>
+            </div>
+            <div class="text-muted">
+                <span id="searchResultsCounter">{{ resumes|length }} resume{{ 's' if resumes|length != 1 else '' }}
+                    found</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-filters">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search by name, skills, or company...">
+
+        <select id="trustScoreFilter" class="filter-select">
+            <option value="all">All Trust Scores</option>
+            <option value="high">90-100% (High Trust)</option>
+            <option value="medium">70-89% (Medium Trust)</option>
+            <option value="low">50-69% (Low Trust)</option>
+            <option value="very-low">0-49% (Very Low Trust)</option>
+        </select>
+
+        <select id="statusFilter" class="filter-select">
+            <option value="all">All Statuses</option>
+            <option value="verified">Verified</option>
+            <option value="review">Needs Review</option>
+            <option value="flagged">Flagged</option>
+        </select>
+
+        <button class="btn btn-outline" onclick="app.clearFilters()" title="Clear all filters">
+            <i class="fas fa-times"></i>
+            Clear
+        </button>
+    </div>
+</div><!-- Resume Table -->
+<div class="table-container">
+    <table id="resumeTable" class="table">
+        <thead>
+            <tr>
+                <th>Candidate</th>
+                <th>Upload Date</th>
+                <th>Trust Score</th>
+                <th>Status</th>
+                <th>Flags</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resume in resumes %}
+            <tr>
+                <td>
+                    <div>
+                        <div style="font-weight: 500;">{{ resume.parsed_data.get('name', 'Unknown') }}</div>
+                        <div class="text-muted" style="font-size: 0.875rem;">
+                            {{ resume.parsed_data.get('email', 'No email') }}
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <span class="text-muted">{{ resume.uploaded_at.strftime('%Y-%m-%d %H:%M') }}</span>
+                </td>
+                <td>
+                    <div class="d-flex align-center gap-2">
+                        <div class="trust-score-mini" style="
+                            width: 40px; 
+                            height: 40px; 
+                            border-radius: 50%; 
+                            background: conic-gradient(
+                                {% if resume.trust_score >= 80 %}var(--success-color){% elif resume.trust_score >= 60 %}var(--warning-color){% else %}var(--danger-color){% endif %} {{ resume.trust_score }}%, 
+                                var(--border-color) {{ resume.trust_score }}%
+                            );
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                        ">
+                            <div style="
+                                position: absolute;
+                                width: 80%;
+                                height: 80%;
+                                background: var(--card-bg);
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 0.75rem;
+                                font-weight: 600;
+                            ">
+                                {{ resume.trust_score }}
+                            </div>
+                        </div>
+                        <span style="font-weight: 500;">{{ resume.trust_score }}%</span>
+                    </div>
+                </td>
+                <td>
+                    {% if resume.trust_score >= 80 %}
+                    <span class="badge badge-verified">
+                        <i class="fas fa-check-circle"></i>
+                        Verified
+                    </span>
+                    {% elif resume.trust_score >= 60 %}
+                    <span class="badge badge-review">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Review
+                    </span>
+                    {% else %}
+                    <span class="badge badge-flagged">
+                        <i class="fas fa-flag"></i>
+                        Flagged
+                    </span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if resume.flags %}
+                    <span class="badge badge-flagged">
+                        <i class="fas fa-flag"></i>
+                        {{ resume.flags|length }}
+                    </span>
+                    {% else %}
+                    <span class="text-muted">None</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <div class="d-flex gap-2">
+                        <a href="{{ url_for('results', resume_id=resume.id) }}" class="btn btn-outline"
+                            style="padding: 0.5rem;">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        <button class="btn btn-outline" style="padding: 0.5rem;"
+                            onclick="downloadReport('{{ resume.id }}')">
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <button class="btn btn-outline" style="padding: 0.5rem;"
+                            onclick="copyToClipboard('{{ resume.id }}')">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="6" class="text-center text-muted" style="padding: 3rem;">
+                    <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+                    <div>No resumes uploaded yet</div>
+                    <div style="margin-top: 1rem;">
+                        <a href="{{ url_for('upload_page') }}" class="btn btn-primary">
+                            <i class="fas fa-upload"></i>
+                            Upload First Resume
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Pagination -->
+<div id="paginationContainer" class="d-flex justify-center" style="display: none;"></div>
+
+<!-- Fraud Alerts Section -->
+{% if recent_flags %}
+<div class="card mt-6">
+    <div class="card-header">
+        <h3 class="card-title" style="color: var(--danger-color);">
+            <i class="fas fa-exclamation-triangle"></i>
+            Recent Fraud Alerts
+        </h3>
+        <p class="card-subtitle">Suspicious claims detected in recent uploads</p>
+    </div>
+
+    {% for flag in recent_flags %}
+    <div class="alert alert-danger mb-3">
+        <div class="d-flex align-center justify-between">
+            <div>
+                <strong>{{ flag.type|title|replace('_', ' ') }}</strong> - {{ flag.message }}
+                <div class="text-muted" style="font-size: 0.875rem; margin-top: 0.25rem;">
+                    Category: {{ flag.category|title }} | Severity: {{ flag.severity|title }}
+                </div>
+            </div>
+            <span class="badge badge-flagged">{{ flag.severity|upper }}</span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize live search functionality
+        if (window.app) {
+            // Load initial resume data
+            window.app.searchResumes();
+
+            // Initialize charts with real data from the backend
+            const trustScoreData = { trust_score_distribution| tojson | safe
+        }
+    };
+    const statusData = {{ verification_status| tojson | safe }};
+    const skillsData = {{ skills_frequency| tojson | safe }};
+
+    // Update charts if data is available
+    window.app.updateTrustScoreChart(trustScoreData);
+    window.app.updateStatusChart(statusData);
+    window.app.updateSkillsChart(skillsData);
+    }
+});
+</script>
+{% endblock %}

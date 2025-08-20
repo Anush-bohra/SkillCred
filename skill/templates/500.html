@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}500 - Server Error - SkillCred{% endblock %}
+
+{% block content %}
+<div class="text-center" style="padding: 4rem 0;">
+    <div style="font-size: 6rem; color: var(--danger-color); margin-bottom: 2rem;">
+        <i class="fas fa-exclamation-triangle"></i>
+    </div>
+    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Server Error</h1>
+    <p class="text-secondary" style="font-size: 1.2rem; margin-bottom: 3rem;">
+        Something went wrong on our end. Our team has been notified.
+    </p>
+    <div class="d-flex justify-center gap-3">
+        <a href="{{ url_for('dashboard') }}" class="btn btn-primary">
+            <i class="fas fa-home"></i>
+            Go to Dashboard
+        </a>
+        <button class="btn btn-outline" onclick="window.location.reload()">
+            <i class="fas fa-redo"></i>
+            Try Again
+        </button>
+    </div>
+</div>
+{% endblock %}
